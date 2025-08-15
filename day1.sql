@@ -25,14 +25,14 @@ VALUES
 select * from employees;
 select * from departments;
 
-select * from employees;
-select empname,salary from employees;
-SELECT * from employees JOIN departments ON employees.deptid = departments.deptid;
-select * from employees where salary>50000;
-select * from employees where hiredate < '2020-01-01';
-select * from employees order by salary desc;
-select count(*) from employees;
-select avg(salary) from employees;
-SELECT deptname,max(salary) from employees JOIN departments ON employees.deptid = departments.deptid  group by deptname ;
-SELECT deptname from employees JOIN departments ON employees.deptid = departments.deptid  group by deptname having count(employees.empname)>1;
+select * from employees; --display all records from employees table
+select empname,salary from employees;--display only empname and salary from employees table
+SELECT * from employees JOIN departments ON employees.deptid = departments.deptid;--find all employees who belong to it department
+select * from employees where salary>50000;--list employees whose salary is greater than 50000
+select * from employees where hiredate < '2020-01-01';--find employees hired before 2020-01-01
+select * from employees order by salary desc;--display employees in desc order of salaries
+select count(*) from employees;--count total no of employees
+select avg(salary) from employees;--find avg salary of employees
+SELECT deptname,max(salary) from employees JOIN departments ON employees.deptid = departments.deptid  group by deptname ;--max salary in each department
+SELECT deptname from employees JOIN departments ON employees.deptid = departments.deptid  group by deptname having count(employees.empname)>1;--find dept having more than one employee
 
